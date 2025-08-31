@@ -1,0 +1,19 @@
+{
+  "name": "mediclinic-combined",
+  "version": "1.0.0",
+  "description": "Medical Clinic Management System - Combined Repository",
+  "scripts": {
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "install:backend": "cd MedialClinic && npm install",
+    "install:frontend": "cd MedicalClinicFrontend && npm install",
+    "backend": "cd MedialClinic && npm run dev",
+    "frontend": "cd MedicalClinicFrontend && npm run dev",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "seed": "cd MedialClinic && npm run seed:templates"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
