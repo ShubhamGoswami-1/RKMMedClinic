@@ -1,0 +1,10 @@
+// Add the import at the top of App.tsx
+import AddStaffPage from './pages/staff/AddStaffPage';
+
+// Add the route after the leave management routes
+{/* Staff Management Routes */}
+<Route path="/staff/add" element={
+  <ProtectedRoute requiredPermissions={Permission.MANAGE_STAFF}>
+    <AddStaffPage />
+  </ProtectedRoute>
+} />
